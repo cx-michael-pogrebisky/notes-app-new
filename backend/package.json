@@ -1,6 +1,6 @@
 {
   "name": "notesapp-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Backend for NotesApp",
   "main": "server.js",
   "type": "module",
@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "pg": "^8.7.1",
-    "cookie-parser": "^1.4.6",
-    "express-session": "^1.18.0",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "cookie-parser": "^1.4.7",
+    "express-session": "^1.18.1",
     "nocache": "^4.0.0"
   }
 }
