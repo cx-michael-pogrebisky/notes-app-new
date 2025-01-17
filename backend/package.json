@@ -4,6 +4,9 @@
   "description": "Backend for NotesApp",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "node server.js"
   },
