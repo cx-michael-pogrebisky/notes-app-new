@@ -18,7 +18,8 @@
     "bcryptjs": "^2.4.3",
     "@mui/material": "^6.4.0",
     "@mui/icons-material": "^6.4.0",
-    "@emotion/styled": "^11.14.0"
+    "@emotion/styled": "^11.14.0",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
