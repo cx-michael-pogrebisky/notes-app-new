@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import zxcvbn from 'zxcvbn';
 import bcrypt from 'bcryptjs';
 import Button from '@mui/material/Button';
@@ -11,14 +11,14 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Grid from '@mui/material/Grid2';
+import Grid2 from '@mui/material/Grid2';
 
 function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const history = useHistory();
+    const history = useNavigate();
 
     const passwordScore = zxcvbn(password).score;
 
@@ -68,7 +68,7 @@ function Register() {
     return (
         <div>
             <h1>Register to Your Notes</h1>
-            <Grid container alignItems="center" justifyContent="center">
+            <Grid2 container alignItems="center" justifyContent="center">
                 <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-username">Username</InputLabel>
                     <OutlinedInput
@@ -89,8 +89,8 @@ function Register() {
                         onChange={e => setEmail(e.target.value)}
                     />
                 </FormControl>
-            </Grid>
-            <Grid container alignItems="center" justifyContent="center">
+            </Grid2>
+            <Grid2 container alignItems="center" justifyContent="center">
                 <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" color={passwordScore > 2 ? 'success' : 'error'}>
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
@@ -136,15 +136,15 @@ function Register() {
                         value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} disabled={passwordScore < 3}
                     />
                 </FormControl>
-            </Grid>
-            <Grid container alignItems="center" spacing={12} justifyContent="center">
+            </Grid2>
+            <Grid2 container alignItems="center" spacing={12} justifyContent="center">
                 <Button sx={{ m: 1, width: '15ch' }} variant="contained" color="success"
                     onClick={handleRegister} disabled={!username || !email || !password || password !== confirmPassword || passwordScore < 3 || !isEmailValid(email)}
                 >
                     Register
                 </Button>
                 <Button sx={{ m: 1, width: '15ch' }} variant="contained" color="primary" onClick={goToLogin}>Login</Button>
-            </Grid>
+            </Grid2>
         </div>
     );
 }
