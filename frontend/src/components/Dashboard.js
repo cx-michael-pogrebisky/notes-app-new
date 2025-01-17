@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Tooltip, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Grid } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
+import { Tooltip, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Grid2 } from '@mui/material';
 
 const Dashboard = () => {
     const [notes, setNotes] = useState([]);
@@ -12,7 +12,7 @@ const Dashboard = () => {
     const [newNote, setNewNote] = useState('');
     const [isEditing, setIsEditing] = useState(false);
     const [isAdding, setIsAdding] = useState(false);
-    const history = useHistory();
+    const history = useNavigate();
 
     useEffect(() => {
         fetchNotes();
@@ -113,7 +113,7 @@ const Dashboard = () => {
                 </select>
                 entries
             </label>
-            <Grid container justifyContent="flex-end"><Button variant="contained" color="error" onClick={handleLogout} align="right">Logout</Button></Grid>
+            <Grid2 container justifyContent="flex-end"><Button variant="contained" color="error" onClick={handleLogout} align="right">Logout</Button></Grid2>
             <table>
                 <thead>
                     <tr>

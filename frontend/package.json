@@ -4,6 +4,9 @@
   "description": "Frontend for NotesApp",
   "main": "index.js",
   "homepage": ".",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -11,17 +14,18 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router-dom": "^6.2.1",
-    "@material-ui/core": "^4.12.4",
     "bcryptjs": "^2.4.3",
     "@mui/material": "^6.4.0",
     "@mui/icons-material": "^6.4.0",
-    "@emotion/styled": "^11.14.0"
+    "@emotion/styled": "^11.14.0",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "browserslist": {
     "production": [
