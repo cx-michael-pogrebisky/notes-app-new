@@ -18,7 +18,7 @@ function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const passwordScore = zxcvbn(password).score;
 
@@ -43,14 +43,14 @@ function Register() {
         });
 
         if (response.ok) {
-            history.push('/login'); // Redirect to login page or dashboard as appropriate
+            navigate('/login'); // Redirect to login page or dashboard as appropriate
         } else {
             alert("Failed to create user.");
         }
     };
 
     const goToLogin = () => {
-        history.push('/login');
+        navigate('/login');
     };
 
     const [showPassword, setShowPassword] = React.useState(false);

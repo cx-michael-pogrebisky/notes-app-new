@@ -15,7 +15,7 @@ function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         setError(''); // Clear previous errors
@@ -29,7 +29,7 @@ function Login() {
             });
             const data = await response.json();
             if (response.ok) {
-                history.push('/dashboard'); // Redirect to dashboard or another route as needed
+                navigate('/dashboard'); // Redirect to dashboard or another route as needed
             } else {
                 setError('Authentication Error'); // Display authentication error
             }
@@ -39,7 +39,7 @@ function Login() {
     };
 
     const handleRegister = () => {
-        history.push('/register'); // Route to the register page
+        navigate('/register'); // Route to the register page
     };
 
     const [showPassword, setShowPassword] = React.useState(false);

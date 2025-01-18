@@ -12,7 +12,7 @@ const Dashboard = () => {
     const [newNote, setNewNote] = useState('');
     const [isEditing, setIsEditing] = useState(false);
     const [isAdding, setIsAdding] = useState(false);
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchNotes();
@@ -91,7 +91,7 @@ const Dashboard = () => {
         fetch('/api/auth/logout', {
             method: 'GET'
         }).then(() => {
-            history.push('/login'); // Redirect to dashboard or another route as needed
+            navigate('/login'); // Redirect to dashboard or another route as needed
         });
     };
 
