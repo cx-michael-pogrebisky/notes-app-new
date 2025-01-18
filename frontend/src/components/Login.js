@@ -15,7 +15,7 @@ function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         setError(''); // Clear previous errors
@@ -29,7 +29,7 @@ function Login() {
             });
             const data = await response.json();
             if (response.ok) {
-                history.push('/dashboard'); // Redirect to dashboard or another route as needed
+                navigate('/dashboard'); // Redirect to dashboard or another route as needed
             } else {
                 setError('Authentication Error'); // Display authentication error
             }
@@ -39,7 +39,7 @@ function Login() {
     };
 
     const handleRegister = () => {
-        history.push('/register'); // Route to the register page
+        navigate('/register'); // Route to the register page
     };
 
     const [showPassword, setShowPassword] = React.useState(false);
@@ -57,50 +57,52 @@ function Login() {
     return (
         <div>
             <h1>Login to Your Notes</h1>
-            <Grid container alignItems="center" justifyContent="center">
-                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-username">Username</InputLabel>
-                    <OutlinedInput
-                        id="outlined-adornment-username"
-                        type="text"
-                        label="Username"
-                        value={username}
-                        onChange={e => setUsername(e.target.value)}
-                    />
-                </FormControl>
-                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                    <OutlinedInput
-                        id="outlined-adornment-password"
-                        type={showPassword ? 'text' : 'password'}
-                        endAdornment={
-                            <InputAdornment position="end">
-                                <IconButton
-                                    aria-label="toggle password visibility"
-                                    onClick={handleClickShowPassword}
-                                    onMouseDown={handleMouseDownPassword}
-                                    onMouseUp={handleMouseUpPassword}
-                                    edge="end"
-                                >
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                                </IconButton>
-                            </InputAdornment>
-                        }
-                        label="Password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                    />
-                </FormControl>
-            </Grid>
-            <Grid container alignItems="center" spacing={12} justifyContent="center">
-                <Button sx={{ m: 1, width: '15ch' }} variant="contained"
-                    onClick={handleLogin}
-                    disabled={!username || !password}
-                >
-                    Login
-                </Button>
-                <Button sx={{ m: 1, width: '15ch' }} variant="outlined" color="primary" onClick={handleRegister}>Register</Button>
-            </Grid>
+            <form>
+                <Grid container alignItems="center" justifyContent="center">
+                    <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-username">Username</InputLabel>
+                        <OutlinedInput
+                            id="outlined-adornment-username"
+                            type="text"
+                            label="Username"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                        />
+                    </FormControl>
+                    <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                        <OutlinedInput
+                            id="outlined-adornment-password"
+                            type={showPassword ? 'text' : 'password'}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                        onMouseUp={handleMouseUpPassword}
+                                        edge="end"
+                                    >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            }
+                            label="Password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
+                    </FormControl>
+                </Grid>
+                <Grid container alignItems="center" spacing={12} justifyContent="center">
+                    <Button sx={{ m: 1, width: '15ch' }} variant="contained"
+                        onClick={handleLogin}
+                        disabled={!username || !password}
+                    >
+                        Login
+                    </Button>
+                    <Button sx={{ m: 1, width: '15ch' }} variant="outlined" color="primary" onClick={handleRegister}>Register</Button>
+                </Grid>
+            </form>
             {error && <div style={{ color: 'red' }}>{error}</div>}
         </div>
     );
