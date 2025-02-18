@@ -19,7 +19,7 @@
     "react-router-dom": "^6.2.1",
     "bcryptjs": "^2.4.3",
     "@mui/material": "^6.4.0",
-    "@mui/icons-material": "^6.4.0",
+    "@mui/icons-material": "^6.4.1",
     "@emotion/styled": "^11.14.0",
     "zxcvbn": "^4.4.2"
   },
