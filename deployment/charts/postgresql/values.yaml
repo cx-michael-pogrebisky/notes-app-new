@@ -2,5 +2,6 @@ postgres:
   dbName: "notesdb"
   user: "postgres"
   storageSize: "10Gi"
+  storageClass: "local-path-retention"
   password: "TGV0bWVpbiAxMjM0NTYh"  # Base64 encoded password
   initdbScriptsConfigMap: "db-init-scripts"

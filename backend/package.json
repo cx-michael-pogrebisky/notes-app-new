@@ -11,15 +11,11 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^2.0.2",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
+    "bcryptjs": "^3.0.2",  
+    "cookie-parser": "^1.4.7",    
+    "express": "^5.1.0",
     "express-session": "^1.18.1",
     "nocache": "^4.0.0",
-    "node": "^22.13.0",
-    "npm": "^11.0.0",
-    "pg": "^8.13.1"
+    "pg": "^8.16.0"
   }
 }

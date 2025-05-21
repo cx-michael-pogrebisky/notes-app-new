@@ -1,7 +1,13 @@
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Tooltip, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Grid2 } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
 
 const Dashboard = () => {
     const [notes, setNotes] = useState([]);
@@ -113,7 +119,7 @@ const Dashboard = () => {
                 </select>
                 entries
             </label>
-            <Grid2 container justifyContent="flex-end"><Button variant="contained" color="error" onClick={handleLogout} align="right">Logout</Button></Grid2>
+            <Grid container justifyContent="flex-end"><Button variant="contained" color="error" onClick={handleLogout} align="right">Logout</Button></Grid>
             <table>
                 <thead>
                     <tr>
