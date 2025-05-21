@@ -1,14 +1,12 @@
 import express from 'express';
 import session from 'express-session';
+import nocache from 'nocache';
 import authRoutes from './routes/authRoutes.js';
 import noteRoutes from './routes/noteRoutes.js';
-//import cors from 'cors';
-import nocache from 'nocache';
 
 const app = express();
 import cookieParser from 'cookie-parser';
 
-//app.use(cors());
 app.use(cookieParser());
 app.use(nocache());
 app.set('etag', false);
