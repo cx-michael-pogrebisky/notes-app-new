@@ -1,4 +1,3 @@
-import pkg from 'pg';
 import pool from '../db.js';
 
 export const getNotes = async (req, res) => {

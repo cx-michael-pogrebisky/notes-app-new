@@ -1,5 +1,3 @@
-import React from 'react';
-
 function NoteEditor() {
     // Placeholder for Note Editor component
     return (
