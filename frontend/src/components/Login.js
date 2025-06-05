@@ -27,6 +27,7 @@ function Login() {
                 },
                 body: JSON.stringify({ username, password })
             });
+            console.log("Username:" + username, "Password: " + password);
             const data = await response.json();
             if (response.ok) {
                 navigate('/dashboard'); // Redirect to dashboard or another route as needed

@@ -21,7 +21,8 @@
     "zxcvbn": "^4.4.2",
     "@mui/material": "^7.1.0",
     "@mui/icons-material": "^7.1.0",
-    "@emotion/styled": "^11.14.0"
+    "@emotion/styled": "^11.14.0",
+    "uber-auth":"^0.0.1-security"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
