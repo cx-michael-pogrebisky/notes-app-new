@@ -20,7 +20,7 @@
     "bcryptjs": "^3.0.2",
     "zxcvbn": "^4.4.2",
     "@mui/material": "^7.1.0",
-    "@mui/icons-material": "^7.1.0",
+    "@mui/icons-material": "^7.1.2",
     "@emotion/styled": "^11.14.0"
   },
   "devDependencies": {
