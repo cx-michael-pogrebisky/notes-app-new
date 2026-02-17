@@ -13,7 +13,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.2",  
     "cookie-parser": "^1.4.7",    
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "express-session": "^1.18.1",
     "nocache": "^4.0.0",
     "pg": "^8.16.0"
